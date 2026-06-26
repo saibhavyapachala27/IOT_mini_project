@@ -1,0 +1,19 @@
+{
+  "name": "iot-showcase-portal-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "IoT Mini Project Showcase Portal/frontend",
+    "IoT Mini Project Showcase Portal/backend"
+  ],
+  "scripts": {
+    "dev-frontend": "npm run dev --workspace=iot-showcase-portal-frontend",
+    "dev-backend": "npm run dev --workspace=iot-showcase-portal-backend",
+    "dev": "concurrently \"npm run dev-frontend\" \"npm run dev-backend\"",
+    "build": "npm run build --workspace=iot-showcase-portal-frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "date-fns": "^4.4.0"
+  }
+}

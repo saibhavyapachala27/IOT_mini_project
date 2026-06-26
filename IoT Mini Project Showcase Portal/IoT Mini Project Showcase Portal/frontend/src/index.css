@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glassmorphism {
+    background: rgba(10, 10, 10, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 255, 157, 0.1);
+  }
+
+  .glassmorphism-card {
+    background: rgba(10, 10, 10, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 255, 157, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glassmorphism-card:hover {
+    border-color: rgba(0, 255, 157, 0.35);
+    box-shadow: 0 0 25px rgba(0, 255, 157, 0.18);
+    transform: translateY(-4px);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 8px rgba(0, 255, 157, 0.4);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141414;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff9d;
+}
+
+/* Input Styles */
+input,
+select,
+textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(0, 255, 157, 0.5);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.15);
+}
